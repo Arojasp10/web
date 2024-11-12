@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Imágenes</title>
+</head>
+<body>
+  <h1></h1>
+  <img id="imagen" src="" alt="Resultado" style="max-width:100%; height:auto;"/>
+
+  <script>
+    // URLs de las imágenes directas
+    const imageA = "https://i.ibb.co/mq95rHp/Mensaje-QR.png";  // Enlace directo
+    const imageB = "https://i.ibb.co/hFfHRQV/Mensaje-QR.gif";  // Enlace directo
+
+    // Función para mostrar imagen
+    function mostrarImagen() {
+      const imagenElem = document.getElementById("imagen");
+      const random = Math.random();
+      if (random < 0.5) {
+        imagenElem.src = imageA;  // 50% de probabilidad para mostrar imagen A
+      } else {
+        imagenElem.src = imageB;  // 50% de probabilidad para mostrar imagen B
+      }
+    }
+
+    // Ejecuta la función al cargar la página
+    mostrarImagen();
+  </script>
+</body>
+</html>
